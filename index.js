@@ -54,6 +54,13 @@ app.get('/about',(req,res)=>{
     })
 });
 
+app.get("/portfolio",(req,res)=>{
+    res.render('portfolio.hbs',{
+        pageTitle:'My Portfolio',
+        message:'This is my portfolio page'
+    })
+});
+
 app.get('/bad',(req,res)=>{
     res.send({
         error_message:"You are in the wrong planet",
